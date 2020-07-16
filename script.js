@@ -1,3 +1,4 @@
+obtenerLocalStorage();
 function To(scene) {   
     var x = location.href = scene;
     document.body.innerHTML = x;
@@ -225,5 +226,35 @@ function PatioUno(n){
     }
     if (n === 3){
         document.getElementById('scnFonoaudiologia').setAttribute('visible', 'true');
+    }
+}
+var i = new Number(0);
+function menu(n){
+    i+=n;
+    if(i%2 === 0){
+        document.getElementById('menu').setAttribute('scale',{x: 0, y: 0, z:0});
+    }else{
+        document.getElementById('menu').setAttribute('scale',{x: 1, y: 1, z:1});
+    }
+}
+function GuardarLocalStorage(n, x){
+    localStorage.setItem("scn",n);
+    To(x);
+}
+function obtenerLocalStorage(){
+    if(localStorage.getItem("scn")){
+        let scena = localStorage.getItem("scn");
+        console.log(scena);
+        if(scena==="1"){
+            patioCaf(4);
+            localStorage.setItem("scn",0)
+        }
+        if(scena==="2"){
+            patioCaf(2);
+            localStorage.setItem("scn",0)
+        }
+    }
+    else{
+        console.log("No hay entradas e el localstorage");
     }
 }

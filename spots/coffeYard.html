@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="icon" href="../img/Icons/LogoKSI-8.png" type="image/png" sizes="16x16">
 	  <meta charset="utf-8">
-    <title>Zonas recreativas</title>
+    <title>Recreational areas</title>
     <script src="../aframe.min.js"></script>
-    <script src="../script.js"></script>
+   
   </head>
 
 	<body>
     <a-scene>
       <a-assets>
         <!----- spots ----->
-        <img id="patioCafeteria" src="../img/Scences/GS__0145.jpg">
-        <img id="cafeteria" src="../img/Scences/GS__0177.jpg">
-        <img id="salonMusica" src="../img/Scences/GS__0203.jpg"> 
+        <img id="patioCafeteria" src="../img/Spots/GS__0145.jpg">
+        <img id="cafeteria" src="../img/Spots/GS__0177.jpg">
+        <img id="salonMusica" src="../img/Spots/GS__0203.jpg"> 
         
-        <img id="voleibol" src="../img/Scences/GS__0147.jpg">
-        <img id="futbol" src="../img/Scences/GS__0151.jpg"> 
-        <img id="basquetbol" src="../img/Scences/GS__0148.jpg">
+        <img id="voleibol" src="../img/Spots/GS__0147.jpg">
+        <img id="futbol" src="../img/Spots/GS__0151.jpg"> 
+        <img id="basquetbol" src="../img/Spots/GS__0148.jpg">
           
-          <img id="voleibol" src="../img/Scences/GS__0147.jpg">
-        <img id="futbol" src="../img/Scences/GS__0151.jpg"> 
-        <img id="basquetbol" src="../img/Scences/GS__0148.jpg">
+          <img id="voleibol" src="../img/Spots/GS__0147.jpg">
+        <img id="futbol" src="../img/Spots/GS__0151.jpg"> 
+        <img id="basquetbol" src="../img/Spots/GS__0148.jpg">
          <!--- icons --->
-         <img id="iconoPatioCafeteria" src="../img/Icons/Asset%2013-8.png">
+         <img id="iconoPatioCafeteria" src="../img/Icons/JardinCafeteria-8.png">
         <img id="iconoCafeteria" src="../img/Icons/Cafeteria-8.png">
         <img id="iconoSalonMusica" src="../img/Icons/Asset%2060-8.png">
           
@@ -44,8 +45,8 @@
       <a-entity id="scnPatioCafeteria">
         <a-sky radius="30" src="#patioCafeteria" rotation="0 -45 0"></a-sky>
           
-        <a-image onclick="javaScript:To('Patio2Primaria.html')" src="#iconoPatio2Primaria" position="2 0 -8" rotation="0 -25 0"></a-image>  
-        <a-image onclick="javaScript:To('Patio2Bachillerato.html')" src="#iconoPatio2Bachillerato" position="-0.1 0 -8" rotation="0 15 0"></a-image>
+        <a-image onclick="javaScript:To('primaryTwo.html')" src="#iconoPatio2Primaria" position="2 0 -8" rotation="0 -25 0"></a-image>  
+        <a-image onclick="javaScript:To('highSchoolTwo.html')" src="#iconoPatio2Bachillerato" position="-0.1 0 -8" rotation="0 15 0"></a-image>
           
           
         <a-image onclick="javaScript:patioCaf(1)" src="#iconoSalonMusica" position="4 0 -4" rotation="0 -75 0"></a-image> 
@@ -101,7 +102,21 @@
 
       </a-entity>
         
-        
+         <!-- Menu -->
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.9 -1" rotation="-25 0 0">
+        </a-box>
+        <a-entity id="menu" scale="0 0 0">
+            <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
+            <a-image onclick="javaScript:To('parking.html')" src="../img/Icons/Parking-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('administration.html')" src="../img/Icons/Administration-8.png" position="0.23 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('park.html')" src="../img/Icons/BotonPark-8.png" position="-0.24 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('childPark.html')" src="../img/Icons/BotonAdmin-8.png" position="0.23 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:GuardarLocalStorage(2,'coffeYard.html')" src="../img/Icons/BotonCafeteria-8.png" position="-0.24 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('primaryOne.html')" src="../img/Icons/BotonPrimaria-8.png" position="0.23 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('highSchoolOne.html')" src="../img/Icons/BotonBachillerato-8.png" position="-0.24 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('library.html')" src="../img/Icons/BotonBiblioteca-8.png" position="0.23 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"></a-image>
+        </a-entity>
 
 <!-- Camera + cursor. -->
       <a-entity camera look-controls>
@@ -112,7 +127,7 @@
         </a-cursor>
       </a-entity>
             
-      
+       <script src="../script.js"></script>
     </a-scene>
   </body>
 </html>

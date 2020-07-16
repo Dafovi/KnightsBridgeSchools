@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="icon" href="../img/Icons/LogoKSI-8.png" type="image/png" sizes="16x16">
 	  <meta charset="utf-8">
     <title>High School</title>
     <script src="../aframe.min.js"></script>
@@ -11,12 +12,12 @@
     <a-scene>
       <a-assets>
         <!----- spots ----->
-        <img id="patio1Bachillerato" src="../img/Scences/GS__0135.jpg">
-        <img id="mathematics" src="../img/Scences/GS__0179.jpg">
-        <img id="math&chemistry" src="../img/Scences/GS__0181.jpg"> 
-        <img id="biologia" src="../img/Scences/GS__0183.jpg">
-        <img id="scienceLab" src="../img/Scences/GS__0206.jpg">
-        <img id="artRoom" src="../img/Scences/GS__0208.jpg">
+        <img id="patio1Bachillerato" src="../img/Spots/GS__0135.jpg">
+        <img id="mathematics" src="../img/Spots/GS__0179.jpg">
+        <img id="math&chemistry" src="../img/Spots/GS__0181.jpg"> 
+        <img id="biologia" src="../img/Spots/GS__0183.jpg">
+        <img id="scienceLab" src="../img/Spots/GS__0206.jpg">
+        <img id="artRoom" src="../img/Spots/GS__0208.jpg">
           
          <!--- icons --->
          <img id="iconoMathematics" src="../img/Icons/Math-8.png">
@@ -25,7 +26,7 @@
         <img id="iconoScienceLab" src="../img/Icons/Laboratorios-8.png"> 
         <img id="iconoArtRoom" src="../img/Icons/ArtRoom-8.png"> 
         
-        <img id="iconoPatio1" src="../img/Icons/Asset%2013-8.png"> 
+        <img id="iconoPatio1" src="../img/Icons/Fuente-8.png"> 
         
         <img id="iconoPatio1Bachillerato" src="../img/Icons/Bachillerato-8.png">
         <img id="iconoPatio2Bachillerato" src="../img/Icons/Bachillerato-8.png">
@@ -37,9 +38,9 @@
       <a-entity id="scnPatio1Bachillerato">
         <a-sky radius="30" src="#patio1Bachillerato" rotation="0 180 0"></a-sky>
           
-        <a-image onclick="javaScript:To('Patio2Bachillerato.html')" src="#iconoPatio2Bachillerato" position="-1 0 -5" rotation="0 0 0"></a-image>  
+        <a-image onclick="javaScript:To('highSchoolTwo.html')" src="#iconoPatio2Bachillerato" position="-1 0 -5" rotation="0 0 0"></a-image>  
           
-        <a-image onclick="javaScript:To('Patio1.html')" src="#iconoPatio1" position="-5 0 4" rotation="0 135 0"></a-image>
+        <a-image onclick="javaScript:To('mainYard.html')" src="#iconoPatio1" position="-5 0 4" rotation="0 135 0"></a-image>
           
         <a-image onclick="javaScript:BachilleratoUno(1)" src="#iconoMathematics" position="5 0 -4" rotation="0 -50 0"></a-image> 
         <a-image onclick="javaScript:BachilleratoUno(2)" src="#iconoMath&chemistry" position="6 0 3" rotation="0 -125 0"></a-image>
@@ -84,6 +85,21 @@
         </a-cursor>
       </a-entity>
             
+         <!-- Menu -->
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.9 -1" rotation="-25 0 0">
+        </a-box>
+        <a-entity id="menu" scale="0 0 0">
+            <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
+            <a-image onclick="javaScript:To('parking.html')" src="../img/Icons/Parking-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('administration.html')" src="../img/Icons/Administration-8.png" position="0.23 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('park.html')" src="../img/Icons/BotonPark-8.png" position="-0.24 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('childPark.html')" src="../img/Icons/BotonAdmin-8.png" position="0.23 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:GuardarLocalStorage(2,'coffeYard.html')" src="../img/Icons/BotonCafeteria-8.png" position="-0.24 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('primaryOne.html')" src="../img/Icons/BotonPrimaria-8.png" position="0.23 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('highSchoolOne.html')" src="../img/Icons/BotonBachillerato-8.png" position="-0.24 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('library.html')" src="../img/Icons/BotonBiblioteca-8.png" position="0.23 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"></a-image>
+        </a-entity>
       
     </a-scene>
   </body>

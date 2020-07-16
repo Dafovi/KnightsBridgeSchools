@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="icon" href="../img/Icons/LogoKSI-8.png" type="image/png" sizes="16x16">
+      <meta charset="utf-8">
+    <title>Library</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="biblioteca1" src="../img/Spots/GS__0155.jpg">
+        <img id="biblioteca2" src="../img/Spots/GS__0153.jpg">
+        
+        <!--- icons --->
+        <img id="iconoBiblioteca1" src="../img/Icons/Biblioteca-8.png">
+        <img id="iconoBiblioteca2" src="../img/Icons/Biblioteca-8.png">
+        
+        <img id="iconoPatio1Primaria" src="../img/Icons/Primaria-8.png">
+        <img id="iconoPatio2Primaria" src="../img/Icons/Primaria-8.png">
+        
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      
+      <!--BIBLIOTECA1-->
+      <a-entity id="scnBiblioteca1">
+        <a-sky radius="30" src="#biblioteca1"></a-sky>
+        <a-image onclick="javaScript:To('primaryOne.html')" src="#iconoPatio1Primaria" position="5.5 0 2.5" rotation="0 -115 0"></a-image>
+        <a-image onclick="javaScript:To('primaryTwo.html')" src="#iconoPatio2Primaria" position="4 0 4" rotation="0 -145 0"></a-image>
+          
+        <a-image onclick="javaScript:biblioteca(2)" src="#iconoBiblioteca2" position="6 0 -2" rotation="0 -56 0"></a-image>
+      </a-entity>
+        <!--BIBLIOTECA2-->
+      <a-entity id="scnBiblioteca2" visible="false">
+        <a-sky radius="30" src="#biblioteca2"></a-sky>
+        <a-image onclick="javaScript:To('primaryOne.html')" src="#iconoPatio1Primaria" position="1 0 -5" rotation="0 0 0"></a-image>
+        <a-image onclick="javaScript:To('primaryTwo.html')" src="#iconoPatio2Primaria" position="2.5 0 -5" rotation="0 -25 0"></a-image>
+          
+        <a-image onclick="javaScript:biblioteca(1)" src="#iconoBiblioteca1" position="6 0 0" rotation="0 -90 0"></a-image>
+      </a-entity>
+        
+        
+         <!-- Menu -->
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.9 -1" rotation="-25 0 0">
+        </a-box>
+        <a-entity id="menu" scale="0 0 0">
+            <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
+            <a-image onclick="javaScript:To('parking.html')" src="../img/Icons/Parking-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('administration.html')" src="../img/Icons/Administration-8.png" position="0.23 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('park.html')" src="../img/Icons/BotonPark-8.png" position="-0.24 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('childPark.html')" src="../img/Icons/BotonAdmin-8.png" position="0.23 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:GuardarLocalStorage(2,'coffeYard.html')" src="../img/Icons/BotonCafeteria-8.png" position="-0.24 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('primaryOne.html')" src="../img/Icons/BotonPrimaria-8.png" position="0.23 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('highSchoolOne.html')" src="../img/Icons/BotonBachillerato-8.png" position="-0.24 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('library.html')" src="../img/Icons/BotonBiblioteca-8.png" position="0.23 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"></a-image>
+        </a-entity>
+      
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

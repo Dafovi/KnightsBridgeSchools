@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Patio1</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="patio1" src="../img/Scences/GS__0133.jpg">
+        <img id="gym" src="../img/Scences/GS__0185.jpg">
+        <img id="fonoaudiologia" src="../img/Scences/GS__0186.jpg">
+        <img id="kids" src="../img/Scences/GS__0157.jpg">
+         <!--- icons --->
+         <img id="iconoAdministracion" src="../img/Icons/Admin-8.png">
+         <img id="iconoPatio1" src="../img/Icons/Asset%2013-8.png"> 
+        <img id="iconoKids" src="../img/Icons/Kids-8.png">
+        <img id="iconoGym" src="../img/Icons/GymKids-8.png">
+        <img id="iconoFonoaudiologia" src="../img/Icons/Asset%2059-8.png">
+        <img id="iconoSalonesPrescolar" src="../img/Icons/Preescolar-8.png">
+          
+          <img id="iconoPatio1Bachillerato" src="../img/Icons/Bachillerato-8.png">
+          <img id="iconoPatio1Primaria" src="../img/Icons/Primaria-8.png"> 
+        
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      <!--PATIO1-->
+      <a-entity id="scnPatio1" rotation="0 -90 0" >
+        <a-sky radius="30" src="#patio1" ></a-sky>
+          
+        <a-image onclick="javaScript:To('Administration.html')" src="#iconoAdministracion" position="-6 0.5 0" rotation="0 90 0"></a-image> 
+        <a-image onclick="javaScript:To('SalonesPrescolar.html')" src="#iconoSalonesPrescolar" position="0 0 -6" rotation="0 0 0"></a-image> 
+          
+        <a-image onclick="javaScript:PatioUno(1)" src="#iconoKids" position="-7 0 -3" rotation="0 45 0"></a-image> 
+        <a-image onclick="javaScript:PatioUno(2)" src="#iconoGym" position="1 0 6" rotation="0 0 0"></a-image> 
+        <a-image onclick="javaScript:PatioUno(3)" src="#iconoFonoaudiologia" position="-1 0 6" rotation="0 0 0"></a-image>          
+        <a-image onclick="javaScript:To('Patio1Primaria.html')" src="#iconoPatio1Primaria" position="4 0 -3" rotation="0 -45 0"></a-image>
+        <a-image onclick="javaScript:To('Patio1Bachillerato.html')" src="#iconoPatio1Bachillerato" position="5 0 2" rotation="0 245 0"></a-image>
+          
+      </a-entity>
+      
+       <!--SALONPATIO1-->
+      <a-entity id="scnKids" visible="false">
+        <a-sky radius="30" src="#kids"></a-sky>
+        <a-image onclick="javaScript:PatioUno(0)" src="#iconoPatio1" position="-2.7 0 4" rotation="0 150 0"></a-image>
+      </a-entity>
+        <!--SALONPATIO2-->
+      <a-entity id="scnGym" visible="false">
+        <a-sky radius="30" src="#gym"></a-sky>
+        <a-image onclick="javaScript:PatioUno(0)" src="#iconoPatio1" position="2.5 0 -4" rotation="0 -45 0"></a-image>
+      </a-entity>
+        <!--SALONPATIO3-->
+      <a-entity id="scnFonoaudiologia" visible="false">
+        <a-sky radius="30" src="#fonoaudiologia"></a-sky>
+        <a-image onclick="javaScript:PatioUno(0)" src="#iconoPatio1" position="4 0 3" rotation="0 -135 0"></a-image>
+      </a-entity>
+      
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

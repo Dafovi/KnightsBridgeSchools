@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Children's Park</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="parqueinf" src="../img/Scences/GS__0119.jpg">
+         <!--- icons --->
+        <img id="iconoParque" src="../img/Icons/BotonPark-8.png">
+        <img id="iconoVistLatParque" src="../img/Icons/BotonPark-8.png">
+        <img id="iconoSalonesPrescolar" src="../img/Icons/Preescolar-8.png">
+        
+</a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+
+ <!--PARQUEINFANTILPREESCOLAR-->
+      <a-entity id="scnParqueinf">
+        <a-sky radius="30" src="#parqueinf" rotation="0 90 0"></a-sky>
+          
+        <a-image onclick="javaScript:To('Park.html')" src="#iconoParque" position="-4 0 4" rotation="0 135 0"></a-image> 
+        <a-image onclick="javaScript:To('LatPark.html')" src="#iconoVistLatParque" position="1 0 -7" rotation="0 0 0"></a-image>
+        <a-image onclick="javaScript:To('SalonesPrescolar.html')" src="#iconoSalonesPrescolar" position="6 0 -1" rotation="0 -90 0"></a-image>
+          
+      </a-entity>
+      
+            
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

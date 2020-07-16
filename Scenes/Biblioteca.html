@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+    <title>Library</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="biblioteca1" src="../img/Scences/GS__0155.jpg">
+        <img id="biblioteca2" src="../img/Scences/GS__0153.jpg">
+        
+        <!--- icons --->
+        <img id="iconoBiblioteca1" src="../img/Icons/Biblioteca-8.png">
+        <img id="iconoBiblioteca2" src="../img/Icons/Biblioteca-8.png">
+        
+        <img id="iconoPatio1Primaria" src="../img/Icons/Primaria-8.png">
+        <img id="iconoPatio2Primaria" src="../img/Icons/Primaria-8.png">
+        
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      
+      <!--BIBLIOTECA1-->
+      <a-entity id="scnBiblioteca1">
+        <a-sky radius="30" src="#biblioteca1"></a-sky>
+        <a-image onclick="javaScript:To('Patio1Primaria.html')" src="#iconoPatio1Primaria" position="5.5 0 2.5" rotation="0 -115 0"></a-image>
+        <a-image onclick="javaScript:To('Patio2Primaria.html')" src="#iconoPatio2Primaria" position="4 0 4" rotation="0 -145 0"></a-image>
+          
+        <a-image onclick="javaScript:biblioteca(2)" src="#iconoBiblioteca2" position="6 0 -2" rotation="0 -56 0"></a-image>
+      </a-entity>
+        <!--BIBLIOTECA2-->
+      <a-entity id="scnBiblioteca2" visible="false">
+        <a-sky radius="30" src="#biblioteca2"></a-sky>
+        <a-image onclick="javaScript:To('Patio1Primaria.html')" src="#iconoPatio1Primaria" position="1 0 -5" rotation="0 0 0"></a-image>
+        <a-image onclick="javaScript:To('Patio2Primaria.html')" src="#iconoPatio2Primaria" position="2.5 0 -5" rotation="0 -25 0"></a-image>
+          
+        <a-image onclick="javaScript:biblioteca(1)" src="#iconoBiblioteca1" position="6 0 0" rotation="0 -90 0"></a-image>
+      </a-entity>
+      
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

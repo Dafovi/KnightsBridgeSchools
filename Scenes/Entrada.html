@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Entrance</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="entrada" src="../img/Scences/GS__0107.jpg">
+         <!--- icons --->
+         <img id="iconoParque" src="../img/Icons/BotonPark-8.png">
+         <img id="iconoParqueadero" src="../img/Icons/Parking-8.png">
+         <img id="iconoAdministracion" src="../img/Icons/Admin-8.png">
+          </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      !--ENTRADA-->
+      <a-entity id="scnEntrada">
+        <a-sky radius="30" src="#entrada" rotation="0 90 0"></a-sky>
+          
+        <a-image onclick="javaScript:To('Parking.html')" src="#iconoParqueadero" position="0.2 0 8" rotation="0 180 0"></a-image> 
+        <a-image onclick="javaScript:To('Administration.html')" src="#iconoAdministracion" position=" 0.2 0 -8" rotation="0 0 0"></a-image> 
+        <a-image onclick="javaScript:To('Park.html')" src="#iconoParque" position="-8 0 0" rotation="0 90 0"></a-image>
+          
+      </a-entity>
+       <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

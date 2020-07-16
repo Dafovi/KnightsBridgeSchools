@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Parking</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="parqueadero" src="../img/Scences/GS__0102.jpg">
+        <img id="parquederoL1" src="../img/Scences/GS__0099.jpg">
+        <img id="parquederoL2" src="../img/Scences/GS__0105.jpg">
+          
+        <img id="entrada" src="../img/5.jpg">
+          <!--- icons --->
+
+        <img id="iconoParqueadero" src="../img/Icons/Parking-8.png">
+        <img id="iconoParquederoL1" src="../img/Icons/Parking-8.png">
+        <img id="iconoParquederoL2" src="../img/Icons/Parking-8.png">
+          
+        <img id="iconoEntrada" src="../img/Icons/Entrada-8.png">
+          </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      
+        <!--PARQUEADERO-->
+      <a-entity id="scnParqueadero">
+        <a-sky radius="30" src="#parqueadero"></a-sky>
+          
+        <a-image onclick="javaScript:parking(1)" src="#iconoParquederoL1" position="-8 1 0.5" rotation="0 90 0"></a-image> 
+        <a-image onclick="javaScript:parking(2)" src="#iconoParquederoL2" position="8 1 -0.5" rotation="0 -90 0"></a-image> 
+        <a-image onclick="javaScript:To('Entrada.html')" src="#iconoEntrada" position="-0.3 1.5 -8" rotation="0 0 0"></a-image>
+          
+      </a-entity>
+        
+        
+        <!--PARQUEADEROLATERAL1-->
+      <a-entity id="scnParqueaderoL1" visible="false">
+        <a-sky radius="30" src="#parquederoL1"></a-sky>
+          
+        <a-image onclick="javaScript:parking(0)" src="#iconoParqueadero" position="8 0 " rotation="0 -90 0"></a-image> 
+                  
+      </a-entity>
+      
+        <!--PARQUEADEROLATERAL2-->
+      <a-entity id="scnParqueaderoL2" visible="false">
+        <a-sky radius="30" src="#parquederoL2"></a-sky>
+          
+        <a-image onclick="javaScript:parking(0)" src="#iconoParqueadero" position="0 0 -8" rotation="0 0 0"></a-image> 
+                  
+      </a-entity>
+        
+          
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

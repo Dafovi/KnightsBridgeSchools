@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>High School</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="patio2Bachillerato" src="../img/Scences/GS__0143.jpg">
+        <img id="business" src="../img/Scences/GS__0189.jpg">
+        <img id="history" src="../img/Scences/GS__0191.jpg"> 
+        <img id="danza" src="../img/Scences/GS__0193.jpg"> 
+        <img id="tok" src="../img/Scences/GS__0195.jpg">
+        <!--- icons --->
+        <img id="iconoPatio2Bachillerato" src="../img/Icons/Bachillerato-8.png">
+        <img id="iconoBusiness" src="../img/Icons/Asset%2055-8.png">
+        <img id="iconoHistory" src="../img/Icons/Asset%2056-8.png"> 
+        <img id="iconoDanza" src="../img/Icons/Danzas-8.png">
+        <img id="iconoTok" src="../img/Icons/Humanities-8.png">
+        <img id="iconoPatioCafeteria" src="../img/Icons/Asset%2013-8.png">
+        <img id="iconoPatio1Bachillerato" src="../img/Icons/Bachillerato-8.png">
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+        
+        <!--PATIO2BACHILLERATO-->
+      <a-entity id="scnPatio2Bachillerato">
+        <a-sky radius="30" src="#patio2Bachillerato" rotation="0 135 0"></a-sky>
+          
+        <a-image onclick="javaScript:To('Patio1Bachillerato.html')" src="#iconoPatio1Bachillerato" position="5 0 -4" rotation="0 -65 0"></a-image>  
+          
+        <a-image onclick="javaScript:To('PatioCafeteria.html')" src="#iconoPatioCafeteria" position="-2 0 6" rotation="0 150 0"></a-image>
+          
+          
+        <a-image onclick="javaScript:BachilleratoDos(1)" src="#iconoBusiness" position="-1 1.3 -6" rotation="0 15 0"></a-image> 
+        <a-image onclick="javaScript:BachilleratoDos(2)" src="#iconoHistory" position="-5 1.5 -6" rotation="0 35 0"></a-image>
+        <a-image onclick="javaScript:BachilleratoDos(3)" src="#iconoDanza" position="-6 1.5 -3" rotation="0 90 0"></a-image>  
+        <a-image onclick="javaScript:BachilleratoDos(4)" src="#iconoTok" position="2 0 -6" rotation="0 0 0"></a-image>
+
+      </a-entity>
+        
+        <!--SALONP2B1-->
+      <a-entity id="scnBusiness" visible="false">
+        <a-sky radius="30" src="#business"></a-sky>
+        <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="0.5 0 -4" rotation="0 0 0"></a-image>
+      </a-entity>
+        <!--SALONP2B2-->
+      <a-entity id="scnHistory" visible="false">
+        <a-sky radius="30" src="#history"></a-sky>
+        <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="2.1 0 4" rotation="0 180 0"></a-image>
+      </a-entity>
+        <!--SALONP2B3-->
+      <a-entity id="scnDanza" visible="false">
+        <a-sky radius="30" src="#danza"></a-sky>
+        <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="2 0 6" rotation="0 180 0"></a-image>
+      </a-entity>
+        <!--SALONP2B4-->
+      <a-entity id="scnTok" visible="false">
+        <a-sky radius="30" src="#tok"></a-sky>
+        <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="-3.8 0 -4" rotation="0 0 0"></a-image>
+      </a-entity>
+
+
+ <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

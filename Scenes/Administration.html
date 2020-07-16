@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Administration</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+        <a-assets>
+            <!----- spots ----->
+            <img id="administracion" src="../img/Scences/GS__0109.jpg">  
+            <img id="oficinasArriba" src="../img/Scences/GS__0114.jpg">
+
+
+            <!--- icons --->
+            <img id="iconoEntrada" src="../img/Icons/Entrada-8.png">
+            <img id="iconoOficinasArriba" src="../img/Icons/ReceptionA-8.png">
+            <img id="iconoPatio1" src="../img/Icons/Asset%2013-8.png"> 
+            <img id="iconoAdministracion" src="../img/Icons/Admin-8.png">
+
+        </a-assets>
+
+        <!--ADMINiSTRACION-->
+        <a-entity id="scnAdministracion">
+            <a-sky radius="30" src="#administracion" rotation="0 90 0"></a-sky>
+
+            <a-image onclick="javaScript:To('Entrada.html')" src="#iconoEntrada" position="0 0 4" rotation="0 180 0"></a-image> 
+            <a-image onclick="javaScript:administration(1)" src="#iconoOficinasArriba" position="6 0 -6" rotation="0 -45 0"></a-image> 
+            <a-image onclick="javaScript:To('Patio1.html')" src="#iconoPatio1" position="0 -0.5 -7" rotation="0 0 0"></a-image>
+          
+        </a-entity>
+        
+        <a-entity id="scnOficinas" visible="false">
+            <a-sky radius="30" src="#oficinasArriba" rotation="0 -90 0"></a-sky>
+
+            <a-image onclick="javaScript:administration(0)" src="#iconoAdministracion" position="-2 -1 4" rotation="0 145 0"></a-image> 
+        </a-entity>
+      
+        <!-- Camera + cursor. -->
+        <a-entity camera look-controls>
+            <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+            </a-cursor>
+        </a-entity>
+    </a-scene>
+  </body>
+</html>

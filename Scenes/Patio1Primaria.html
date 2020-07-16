@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Primary</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+         <img id="patio1Primaria" src="../img/Scences/GS__0139.jpg">
+        <img id="year4" src="../img/Scences/GS__0159.jpg">
+        <img id="year5" src="../img/Scences/GS__0161.jpg">
+        <img id="year6" src="../img/Scences/GS__0163.jpg"> 
+          
+        <img id="mac" src="../img/Scences/GS__0201.jpg">
+        
+        <img id="iconoPatio1Primaria" src="../img/Icons/Primaria-8.png">
+        <img id="iconoYear4" src="../img/Icons/Year4-A-8.png">
+        <img id="iconoYear5" src="../img/Icons/Year5-A-8.png">
+        <img id="iconoYear6" src="../img/Icons/Year6-A-8.png">
+          
+        <img id="iconoMac" src="../img/Icons/MacLab-8.png">
+          
+        <img id="iconoPatio2Primaria" src="../img/Icons/Primaria-8.png">
+        
+        <img id="iconoBiblioteca1" src="../img/Icons/Biblioteca-8.png">
+          
+        <img id="iconoPatio1" src="../img/Icons/Asset%2013-8.png"> 
+         </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+       <!--PATIO1PRIMARIA-->
+      <a-entity id="scnPatio1Primaria">
+        <a-sky radius="30" src="#patio1Primaria"></a-sky>
+          
+        <a-image onclick="javaScript:PrimariaUno(1)" src="#iconoYear4" position="-5 0 2.5" rotation="0 120 0"></a-image> 
+        <a-image onclick="javaScript:PrimariaUno(2)" src="#iconoYear5" position="-6 0 -1" rotation="0 75 0"></a-image> 
+        <a-image onclick="javaScript:PrimariaUno(3)" src="#iconoYear6" position="-6 0 -4" rotation="0 45 0"></a-image>
+          
+        <a-image onclick="javaScript:To('Patio2Primaria.html')" src="#iconoPatio2Primaria" position="-3 0 -5" rotation="0 25 0"></a-image>          
+        <a-image onclick="javaScript:To('Biblioteca.html')" src="#iconoBiblioteca1" position="1 0 -6" rotation="0 -25 0"></a-image>      
+                  
+        <a-image onclick="javaScript:To('Patio1.html')" src="#iconoPatio1" position="4 0 3" rotation="0 220 0"></a-image> 
+          
+        <a-image onclick="javaScript:PrimariaUno(4)" src="#iconoMac" position="-5 1.5 2.5" rotation="0 120 0"></a-image>
+
+      </a-entity>
+        
+         <!--SALONP1P1-->
+      <a-entity id="scnYear4" visible="false">
+        <a-sky radius="30" src="#year4"></a-sky>
+        <a-image onclick="javaScript:PrimariaUno(0)" src="#iconoPatio1Primaria" position="-4 0 4" rotation="0 150 0"></a-image>
+      </a-entity>
+        <!--SALONP1P2-->
+      <a-entity id="scnYear5" visible="false">
+        <a-sky radius="30" src="#year5"></a-sky>
+        <a-image onclick="javaScript:PrimariaUno(0)" src="#iconoPatio1Primaria" position="-3 0 -3" rotation="0 45 0"></a-image>
+      </a-entity>
+        <!--SALONP1P3-->
+      <a-entity id="scnYear6" visible="false">
+        <a-sky radius="30" src="#year6"></a-sky>
+        <a-image onclick="javaScript:PrimariaUno(0)" src="#iconoPatio1Primaria" position="-3 0 3" rotation="0 150 0"></a-image>
+      </a-entity>
+        <!--SALONP1P4-->
+      <a-entity id="scnMac" visible="false">
+        <a-sky radius="30" src="#mac"></a-sky>
+        <a-image onclick="javaScript:PrimariaUno(0)" src="#iconoPatio2Primaria" position="3 -0.5 4" rotation="0 -120 0"></a-image>
+      </a-entity>
+
+
+   <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

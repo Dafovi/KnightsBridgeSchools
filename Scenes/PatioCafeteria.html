@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Zonas recreativas</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="patioCafeteria" src="../img/Scences/GS__0145.jpg">
+        <img id="cafeteria" src="../img/Scences/GS__0177.jpg">
+        <img id="salonMusica" src="../img/Scences/GS__0203.jpg"> 
+        
+        <img id="voleibol" src="../img/Scences/GS__0147.jpg">
+        <img id="futbol" src="../img/Scences/GS__0151.jpg"> 
+        <img id="basquetbol" src="../img/Scences/GS__0148.jpg">
+          
+          <img id="voleibol" src="../img/Scences/GS__0147.jpg">
+        <img id="futbol" src="../img/Scences/GS__0151.jpg"> 
+        <img id="basquetbol" src="../img/Scences/GS__0148.jpg">
+         <!--- icons --->
+         <img id="iconoPatioCafeteria" src="../img/Icons/Asset%2013-8.png">
+        <img id="iconoCafeteria" src="../img/Icons/Cafeteria-8.png">
+        <img id="iconoSalonMusica" src="../img/Icons/Asset%2060-8.png">
+          
+        <img id="iconoVoleibol" src="../img/Icons/VolleyBall-8.png">
+        <img id="iconoFutbol" src="../img/Icons/CanchaFutbol-8.png">
+        <img id="iconoBasquetbol" src="../img/Icons/Basketball-8.png">
+          
+          
+        <img id="iconoPatio2Primaria" src="../img/Icons/Primaria-8.png">
+        <img id="iconoPatio2Bachillerato" src="../img/Icons/Bachillerato-8.png">
+          
+        
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      <!--PATIOCAFETERIA-->
+      <a-entity id="scnPatioCafeteria">
+        <a-sky radius="30" src="#patioCafeteria" rotation="0 -45 0"></a-sky>
+          
+        <a-image onclick="javaScript:To('Patio2Primaria.html')" src="#iconoPatio2Primaria" position="2 0 -8" rotation="0 -25 0"></a-image>  
+        <a-image onclick="javaScript:To('Patio2Bachillerato.html')" src="#iconoPatio2Bachillerato" position="-0.1 0 -8" rotation="0 15 0"></a-image>
+          
+          
+        <a-image onclick="javaScript:patioCaf(1)" src="#iconoSalonMusica" position="4 0 -4" rotation="0 -75 0"></a-image> 
+        <a-image onclick="javaScript:patioCaf(2)" src="#iconoCafeteria" position="-3 0 -6" rotation="0 45 0"></a-image>
+        <a-image onclick="javaScript:patioCaf(4)" src="#iconoFutbol" position="-6 0 0" rotation="0 90 0"></a-image> 
+
+      </a-entity>
+        
+        <!--SALONMUSICA-->
+      <a-entity id="scnSalonMusica" visible="false">
+        <a-sky radius="30" src="#salonMusica"></a-sky>
+          
+        <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="-3.5 0 -4" rotation="0 0 0"></a-image>  
+
+      </a-entity>
+        
+        <!--CAFETERIA-->
+      <a-entity id="scnCafeteria" visible="false">
+        <a-sky radius="30" src="#cafeteria"></a-sky>
+          
+        <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="2.2 0 -6" rotation="0 0 0"></a-image>  
+
+      </a-entity>
+        
+        <!--VOLEIBOL-->
+      <a-entity id="scnVoleibol"  visible="false">
+        <a-sky radius="30" src="#voleibol"></a-sky>
+          
+        <a-image onclick="javaScript:patioCaf(4)" src="#iconoFutbol" position="0 0 6" rotation="0 180 0"></a-image>
+        <a-image onclick="javaScript:patioCaf(5)" src="#iconoBasquetbol" position="6 0 0" rotation="0 -90 0"></a-image> 
+        <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="-8 0 3" rotation="0 95 0"></a-image>  
+
+
+      </a-entity>
+        
+         <!--FUTBOL-->
+      <a-entity id="scnFutbol" visible="false">
+        <a-sky radius="30" src="#futbol"></a-sky>
+          
+        <a-image onclick="javaScript:patioCaf(3)" src="#iconoVoleibol" position="1 0.5 5" rotation="0 180 0"></a-image>
+        <a-image onclick="javaScript:patioCaf(5)" src="#iconoBasquetbol" position="-4 0.5 5" rotation="0 135 0"></a-image> 
+        <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="8 0 3" rotation="0 -95 0"></a-image>  
+
+      </a-entity>
+        
+        <!--BASQUETBOL-->
+      <a-entity id="scnBasquetbol" visible="false">
+        <a-sky radius="30" src="#basquetbol"></a-sky>
+          
+        <a-image onclick="javaScript:patioCaf(4)" src="#iconoFutbol" position="3 0.5 -5" rotation="0 -25 0"></a-image>
+        <a-image onclick="javaScript:patioCaf(3)" src="#iconoVoleibol" position="8 1 -0.5" rotation="0 -90 0"></a-image> 
+        <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="8 0.5 -3" rotation="0 -75 0"></a-image>  
+
+      </a-entity>
+        
+        
+
+<!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

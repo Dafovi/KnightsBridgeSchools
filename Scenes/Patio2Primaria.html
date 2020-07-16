@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Primary</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="patio2Primaria" src="../img/Scences/GS__0137.jpg">
+        <img id="radio" src="../img/Scences/GS__0199.jpg">
+        <img id="radio2" src="../img/Scences/GS__0197.jpg">
+        <img id="spanish1" src="../img/Scences/GS__0165.jpg">
+        <img id="spanish2" src="../img/Scences/GS__0167.jpg">
+        <img id="español" src="../img/Scences/GS__0169.jpg">
+        <img id="spanish3" src="../img/Scences/GS__0171.jpg">
+        <img id="english" src="../img/Scences/GS__0173.jpg">
+        <img id="auditorio" src="../img/Scences/GS__0175.jpg">
+         <!--- icons --->
+         <img id="iconoPatio2Primaria" src="../img/Icons/Primaria-8.png">
+         <img id="iconoRadio" src="../img/Icons/Radio-8.png">
+        <img id="iconoSpanish1" src="../img/Icons/Spanish-8.png">
+        <img id="iconoSpanish2" src="../img/Icons/Spanish-8.png">
+        <img id="iconoEspañol" src="../img/Icons/Espanol-8.png">
+        <img id="iconoSpanish3" src="../img/Icons/Spanish-8.png">
+        <img id="iconoEnglish" src="../img/Icons/English-8.png">
+        <img id="iconoAuditorio" src="../img/Icons/Auditorio-8.png">
+        
+        <img id="iconoPatio1Primaria" src="../img/Icons/Primaria-8.png">
+        
+        <img id="iconoBiblioteca1" src="../img/Icons/Biblioteca-8.png">
+          
+        <img id="iconoPatioCafeteria" src="../img/Icons/Asset%2013-8.png">
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+        <!--PATIO2PRIMARIA-->
+      <a-entity id="scnPatio2Primaria">
+        <a-sky radius="30" src="#patio2Primaria"></a-sky>
+          
+        <a-image onclick="javaScript:To('Patio1Primaria.html')" src="#iconoPatio1Primaria" position="1 0 4" rotation="0 180 0"></a-image>  
+          
+        <a-image onclick="javaScript:To('Biblioteca.html')" src="#iconoBiblioteca1" position="6 0 1" rotation="0 -90 0"></a-image>        
+          
+        <a-image onclick="javaScript:To('PatioCafeteria.html')" src="#iconoPatioCafeteria" position="4.5 0 -3" rotation="0 -40 0"></a-image>
+          
+          
+        <a-image onclick="javaScript:PrimariaDos(1)" src="#iconoSpanish1" position="-4 -0.3 3.5" rotation="0 110 0"></a-image> 
+        <a-image onclick="javaScript:PrimariaDos(2)" src="#iconoSpanish2" position="-6 -0.4 -2.5" rotation="0 90 0"></a-image>
+        <a-image onclick="javaScript:PrimariaDos(3)" src="#iconoEspañol" position="-5 -0.4 -4" rotation="0 80 0"></a-image>
+        <a-image onclick="javaScript:PrimariaDos(4)" src="#iconoSpanish3" position="-0.5 -0.1 -6" rotation="0 20 0"></a-image>
+        <a-image onclick="javaScript:PrimariaDos(5)" src="#iconoEnglish" position="-3.2 -0.2 -6" rotation="0 45 0"></a-image>         
+        <a-image onclick="javaScript:PrimariaDos(6)" src="#iconoAuditorio" position="-4 1.5 -0.15" rotation="0 90 0"></a-image>
+        
+          
+        <a-image onclick="javaScript:PrimariaDos(8)" src="#iconoRadio" position="5 0 2" rotation="0 230 0"></a-image> 
+
+      </a-entity>
+        
+         <!--SALONP2P1-->
+      <a-entity id="scnSpanish1" visible="false">
+        <a-sky radius="30" src="#spanish1"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="-3 0 -4" rotation="0 0 0"></a-image>
+      </a-entity>
+        <!--SALONP2P2-->
+      <a-entity id="scnSpanish2" visible="false">
+        <a-sky radius="30" src="#spanish2"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="-3.5 0 4" rotation="0 150 0"></a-image>
+      </a-entity>
+        <!--SALONP2P3-->
+      <a-entity id="scnEspañol" visible="false">
+        <a-sky radius="30" src="#español"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="-3.5 0 -4" rotation="0 45 0"></a-image>
+      </a-entity>
+        <!--SALONP2P4-->
+      <a-entity id="scnSpanish3" visible="false">
+        <a-sky radius="30" src="#spanish3"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="-2.5 0 4" rotation="0 150 0"></a-image>
+      </a-entity>
+        <!--SALONP2P5-->
+      <a-entity id="scnEnglish" visible="false">
+        <a-sky radius="30" src="#english"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="2.8 0 -4" rotation="0 -45 0"></a-image>
+      </a-entity>
+        <!--SALONP2P6-->
+      <a-entity id="scnAuditorio" visible="false">
+        <a-sky radius="30" src="#auditorio"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="-5 -1 0" rotation="0 90 0"></a-image>
+      </a-entity>
+        
+        
+        <!--RADIO-->
+      <a-entity id="scnRadio" visible="false">
+        <a-sky radius="30" src="#radio"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(0)" src="#iconoPatio2Primaria" position="0.5 0 -4" rotation="0 -20 0"></a-image>
+        <a-image onclick="javaScript:PrimariaDos(9)" src="#iconoRadio" position="-5 0 0" rotation="0 90 0"></a-image>  
+      </a-entity>
+        <!--RADIO2-->
+      <a-entity id="scnRadio2" visible="false">
+        <a-sky radius="30" src="#radio2"></a-sky>
+        <a-image onclick="javaScript:PrimariaDos(8)" src="#iconoRadio" position="5 0 2" rotation="0 230 0"></a-image> 
+      </a-entity>
+      
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

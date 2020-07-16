@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>High School</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+        <img id="patio1Bachillerato" src="../img/Scences/GS__0135.jpg">
+        <img id="mathematics" src="../img/Scences/GS__0179.jpg">
+        <img id="math&chemistry" src="../img/Scences/GS__0181.jpg"> 
+        <img id="biologia" src="../img/Scences/GS__0183.jpg">
+        <img id="scienceLab" src="../img/Scences/GS__0206.jpg">
+        <img id="artRoom" src="../img/Scences/GS__0208.jpg">
+          
+         <!--- icons --->
+         <img id="iconoMathematics" src="../img/Icons/Math-8.png">
+        <img id="iconoMath&chemistry" src="../img/Icons/MathChemistry-8.png">
+        <img id="iconBiologia" src="../img/Icons/Biology-8.png">
+        <img id="iconoScienceLab" src="../img/Icons/Laboratorios-8.png"> 
+        <img id="iconoArtRoom" src="../img/Icons/ArtRoom-8.png"> 
+        
+        <img id="iconoPatio1" src="../img/Icons/Asset%2013-8.png"> 
+        
+        <img id="iconoPatio1Bachillerato" src="../img/Icons/Bachillerato-8.png">
+        <img id="iconoPatio2Bachillerato" src="../img/Icons/Bachillerato-8.png">
+         </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+       <!--PATIO1BACHILLERATO-->
+      <a-entity id="scnPatio1Bachillerato">
+        <a-sky radius="30" src="#patio1Bachillerato" rotation="0 180 0"></a-sky>
+          
+        <a-image onclick="javaScript:To('Patio2Bachillerato.html')" src="#iconoPatio2Bachillerato" position="-1 0 -5" rotation="0 0 0"></a-image>  
+          
+        <a-image onclick="javaScript:To('Patio1.html')" src="#iconoPatio1" position="-5 0 4" rotation="0 135 0"></a-image>
+          
+        <a-image onclick="javaScript:BachilleratoUno(1)" src="#iconoMathematics" position="5 0 -4" rotation="0 -50 0"></a-image> 
+        <a-image onclick="javaScript:BachilleratoUno(2)" src="#iconoMath&chemistry" position="6 0 3" rotation="0 -125 0"></a-image>
+        <a-image onclick="javaScript:BachilleratoUno(3)" src="#iconBiologia" position="6 0 5" rotation="0 -145 0"></a-image> 
+        <a-image onclick="javaScript:BachilleratoUno(4)" src="#iconoScienceLab" position="4 0 6" rotation="0 220 0"></a-image> 
+        <a-image onclick="javaScript:BachilleratoUno(5)" src="#iconoArtRoom" position="2.5 0 6" rotation="0 190 0"></a-image>
+
+      </a-entity>
+        
+        <!--SALONP1B1-->
+      <a-entity id="scnMathematics" visible="false">
+        <a-sky radius="30" src="#mathematics"></a-sky>
+        <a-image onclick="javaScript:BachilleratoUno(0)" src="#iconoPatio1Bachillerato" position="0.7 0.5 -4" rotation="0 0 0"></a-image>
+      </a-entity>
+        <!--SALONP1B2-->
+      <a-entity id="scnMath&chemistry"visible="false">
+        <a-sky radius="30" src="#math&chemistry"></a-sky>
+        <a-image onclick="javaScript:BachilleratoUno(0)" src="#iconoPatio1Bachillerato" position="-4 0.5 -4" rotation="0 45 0"></a-image>
+      </a-entity>
+        <!--SALONP1B3-->
+      <a-entity id="scnBiologia" visible="false">
+        <a-sky radius="30" src="#biologia"></a-sky>
+        <a-image onclick="javaScript:BachilleratoUno(0)" src="#iconoPatio1Bachillerato" position="1 0.5 -4" rotation="0 0 0"></a-image>
+      </a-entity>
+        <!--SALONP1B4-->
+      <a-entity id="scnScienceLab" visible="false">
+        <a-sky radius="30" src="#scienceLab"></a-sky>
+        <a-image onclick="javaScript:BachilleratoUno(0)" src="#iconoPatio1Bachillerato" position="-5.8 0.5 -3" rotation="0 90 0"></a-image>
+      </a-entity>
+        <!--SALONP1B5-->
+      <a-entity id="scnArtRoom" visible="false">
+        <a-sky radius="30" src="#artRoom"></a-sky>
+        <a-image onclick="javaScript:BachilleratoUno(0)" src="#iconoPatio1Bachillerato" position="3.2 0.5 3" rotation="0 190 0"></a-image>
+      </a-entity>
+      
+       <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>

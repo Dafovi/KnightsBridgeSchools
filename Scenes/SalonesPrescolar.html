@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+    <title>Preescolar</title>
+    <script src="../aframe.min.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+	<body>
+    <a-scene>
+      <a-assets>
+        <!----- spots ----->
+         <img id="salonesPrescolar" src="../img/Scences/GS__0123.jpg">
+        <img id="year3" src="../img/Scences/GS__0125.jpg">
+        <img id="year2" src="../img/Scences/GS__0126.jpg">
+        <img id="year1" src="../img/Scences/GS__0129.jpg">
+        <img id="reception" src="../img/Scences/GS__0130.jpg">
+        <!--- icons --->
+        <img id="iconoReception" src="../img/Icons/ReceptionA-8.png">
+        <img id="iconoYear1" src="../img/Icons/Year1-A-8.png">
+        <img id="iconoYear2" src="../img/Icons/Year2-A-8.png">
+        <img id="iconoYear3" src="../img/Icons/Year3-A-8.png">
+        <img id="iconoSaloPrescolar" src="../img/Icons/Preescolar-8.png">
+          
+        <img id="iconoParqueinf" src="../img/Icons/BotonPark-8.png">
+        <img id="iconoVistLatParque" src="../img/Icons/BotonPark-8.png">
+          
+        <img id="iconoPatio1" src="../img/Icons/Asset%2013-8.png">
+        </a-assets>
+      
+     
+      <!-- 360-degree image scenes.-->
+      <!--SALONESPREESCOLAR-->
+      <a-entity id="scnSalonesPrescolar">
+        <a-sky radius="30" src="#salonesPrescolar" rotation="0 145 0 "></a-sky>
+          
+        <a-image onclick="javaScript:To('Patio1.html')" src="#iconoPatio1" position="0 0 4" rotation="0 -180 0"></a-image> 
+          
+        <a-image onclick="javaScript:To('ChildPark.html')" src="#iconoParqueinf" position="-3 0.5 -5" rotation="0 0 0"></a-image> 
+        <a-image onclick="javaScript:To('LatPark.html')" src="#iconoVistLatParque" position="1.5 0.5 -5" rotation="0 0 0"></a-image> 
+          
+        <a-image onclick="javaScript:salonesPre(1)" src="#iconoReception" position="-6 0 -4" rotation="0 60 0"></a-image>
+        <a-image onclick="javaScript:salonesPre(2)" src="#iconoYear1" position="-4 0 0" rotation="0 90 0"></a-image>
+        <a-image onclick="javaScript:salonesPre(3)" src="#iconoYear2" position="5 0 -5" rotation="0 -45 0"></a-image>
+        <a-image onclick="javaScript:salonesPre(4)" src="#iconoYear3" position="5.5 0 -8" rotation="0 -45 0"></a-image>
+          
+      </a-entity>
+        
+        <!--SALONPRES1-->
+      <a-entity id="scnReception" visible="false">
+        <a-sky radius="30" src="#reception" rotation="0 90 0"></a-sky>
+        <a-image onclick="javaScript:salonesPre(0)" src="#iconoSaloPrescolar" position="5 -0.5 -4" rotation="0 -45 0"></a-image>
+      </a-entity>
+        <!--SALONPRES2-->
+      <a-entity id="scnYear1"  visible="false">
+        <a-sky radius="30" src="#year1"></a-sky>
+        <a-image onclick="javaScript:salonesPre(0)" src="#iconoSaloPrescolar" position="-3.5 -0.5 -5" rotation="0 45 0"></a-image>
+      </a-entity>
+        <!--SALONPRES3-->
+      <a-entity id="scnYear2"  visible="false">
+        <a-sky radius="30" src="#year2" rotation="0 -90 0"></a-sky>
+        <a-image onclick="javaScript:salonesPre(0)" src="#iconoSaloPrescolar" position="-3 -0.5 -5" rotation="0 45 0"></a-image>
+      </a-entity>
+        <!--SALONPRES4-->
+      <a-entity id="scnYear3" visible="false">
+        <a-sky radius="30" src="#year3" rotation="0 180 0"></a-sky>
+        <a-image onclick="javaScript:salonesPre(0)" src="#iconoSaloPrescolar" position="3.5 -0.5 -4" rotation="0 -40 0"></a-image>
+      </a-entity>
+      
+         <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+         <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>
+      </a-entity>
+            
+      
+    </a-scene>
+  </body>
+</html>
+      
+

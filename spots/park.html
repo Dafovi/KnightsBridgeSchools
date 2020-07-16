@@ -4,8 +4,8 @@
       <link rel="icon" href="../img/Icons/LogoKSI-8.png" type="image/png" sizes="16x16">
 	  <meta charset="utf-8">
     <title>Children's Park</title>
-    <script src="../aframe.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="../style/aframe.min.js"></script>
+    <script src="../style/script.js"></script>
   </head>
 
 	<body>
@@ -44,15 +44,20 @@
         </a-box>
         <a-entity id="menu" scale="0 0 0">
             <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
-            <a-image onclick="javaScript:To('parking.html')" src="../img/Icons/Parking-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:To('administration.html')" src="../img/Icons/Administration-8.png" position="0.23 0.48 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:To('park.html')" src="../img/Icons/BotonPark-8.png" position="-0.24 0.23 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:To('childPark.html')" src="../img/Icons/BotonAdmin-8.png" position="0.23 0.23 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:GuardarLocalStorage(2,'coffeYard.html')" src="../img/Icons/BotonCafeteria-8.png" position="-0.24 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:To('primaryOne.html')" src="../img/Icons/BotonPrimaria-8.png" position="0.23 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:To('highSchoolOne.html')" src="../img/Icons/BotonBachillerato-8.png" position="-0.24 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image onclick="javaScript:To('library.html')" src="../img/Icons/BotonBiblioteca-8.png" position="0.23 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
-            <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"></a-image>
+            
+            <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('library.html')" src="../img/Icons/BotonBiblioteca-8.png" position="0.23 0.48 -1.4" scale="0.5 0.3 0"> </a-image>
+            
+             <a-image onclick="javaScript:To('highSchoolOne.html')" src="../img/Icons/BotonBachillerato-8.png"position="-0.24 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('coffeYard.html')" src="../img/Icons/BotonCafeteria-8 (1).png" position="0.23 0.23 -1.4" scale="0.5 0.3 0"></a-image>
+            
+            <a-image onclick="javaScript:To('preschool.html')" src="../img/Icons/BotonPreescolar-8.png" position="0.23 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('primaryOne.html')" src="../img/Icons/BotonPrimaria-8.png" position="-0.24 -0.02 -1.4" scale="0.5 0.3 0"></a-image>
+        
+            <a-image onclick="javaScript:To('mainYard.html')" src="../img/Icons/BotonFuente-8.png"  position="-0.24 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+            <a-image onclick="javaScript:To('administration.html')" src="../img/Icons/Administration-8.png" position="0.23 -0.27 -1.4" scale="0.5 0.3 0"></a-image>
+                
+            <a-image onclick="javaScript:To('entry.html')" src="../img/Icons/BotonEntrada-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
         </a-entity>
         
     </a-scene>

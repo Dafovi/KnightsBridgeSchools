@@ -43,7 +43,7 @@
       <!-- 360-degree image scenes.-->
       <!--PATIOCAFETERIA-->
       <a-entity id="scnPatioCafeteria">
-        <a-sky radius="30" src="#patioCafeteria" rotation="0 -45 0"></a-sky>
+        <a-sky radius="30" src="#patioCafeteria" rotation="0 -25 0"></a-sky>
           
         <a-image onclick="javaScript:To('primaryTwo.html')" src="#iconoPatio2Primaria" position="2 0 -8" rotation="0 -25 0"></a-image>  
         <a-image onclick="javaScript:To('highSchoolTwo.html')" src="#iconoPatio2Bachillerato" position="-0.1 0 -8" rotation="0 15 0"></a-image>
@@ -84,7 +84,7 @@
         
          <!--FUTBOL-->
       <a-entity id="scnFutbol" visible="false">
-        <a-sky radius="30" src="#futbol"></a-sky>
+        <a-sky radius="30" src="#futbol" rotation="0 90 0"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(3)" src="#iconoVoleibol" position="1 0.5 5" rotation="0 180 0"></a-image>
         <a-image onclick="javaScript:patioCaf(5)" src="#iconoBasquetbol" position="-4 0.5 5" rotation="0 135 0"></a-image> 
@@ -94,7 +94,7 @@
         
         <!--BASQUETBOL-->
       <a-entity id="scnBasquetbol" visible="false">
-        <a-sky radius="30" src="#basquetbol"></a-sky>
+        <a-sky radius="30" src="#basquetbol" rotation="0 -135 0"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(4)" src="#iconoFutbol" position="3 0.5 -5" rotation="0 -25 0"></a-image>
         <a-image onclick="javaScript:patioCaf(3)" src="#iconoVoleibol" position="8 1 -0.5" rotation="0 -90 0"></a-image> 

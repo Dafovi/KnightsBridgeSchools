@@ -9,7 +9,7 @@
   </head>
 
 	<body>
-    <a-scene>
+    <a-scene vr-mode-ui="enabled: false">
         <a-assets>
             <!----- spots ----->
             <img id="administracion" src="../img/Spots/GS__0109.jpg">  
@@ -40,7 +40,18 @@
             <a-image onclick="javaScript:administration(0)" src="#iconoAdministracion" position="-2 -1 4" rotation="0 145 0"></a-image> 
         </a-entity>-->
       
-         <!-- Menu -->
+                          
+        <!-- Camera + cursor. -->
+       <a-entity camera look-controls cursor="rayOrigin: mouse">
+          
+         <!-- <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>-->
+           
+           
+            <!-- Menu -->
         <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
         </a-box>
         <!-- Siguiente-->
@@ -68,16 +79,7 @@
                 
             <a-image onclick="javaScript:To('entry.html')" src="../img/Icons/BotonEntrada-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
         </a-entity>
-                  
-        <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor
-                  position="0 0 -1"
-                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
-                  material="color: #CCC; shader: flat;">
-            </a-cursor>
-           <!-- <a-sphere id="transicion" color="black" radius="-1" ></a-sphere>-->
-        </a-entity>
+      </a-entity>
         
        
     </a-scene>

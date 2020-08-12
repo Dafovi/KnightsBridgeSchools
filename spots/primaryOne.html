@@ -9,7 +9,7 @@
   </head>
 
 	<body>
-    <a-scene>
+    <a-scene vr-mode-ui="enabled: false">
       <a-assets>
         <!----- spots ----->
          <img id="patio1Primaria" src="../img/Spots/GS__0139.jpg">
@@ -73,7 +73,18 @@
         <a-image onclick="javaScript:PrimariaUno(0)" src="#iconoPatio2Primaria" position="3 -0.5 4" rotation="0 -120 0"></a-image>
       </a-entity>
 
-        <!-- Menu -->
+        
+
+   <!-- Camera + cursor. -->
+      <a-entity camera look-controls cursor="rayOrigin: mouse">
+          
+         <!-- <a-cursor
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
+                  material="color: #CCC; shader: flat;">
+        </a-cursor>-->
+          
+          <!-- Menu -->
         <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
         </a-box>
         <!-- Siguiente-->
@@ -101,14 +112,6 @@
                 
             <a-image onclick="javaScript:To('entry.html')" src="../img/Icons/BotonEntrada-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
         </a-entity>
-
-   <!-- Camera + cursor. -->
-      <a-entity camera look-controls>
-         <a-cursor
-                  position="0 0 -1"
-                  geometry="primitive: ring; radiusInner: 0.009; radiusOuter: 0.015;"
-                  material="color: #CCC; shader: flat;">
-        </a-cursor>
       </a-entity>
             
         

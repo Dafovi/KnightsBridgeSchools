@@ -109,9 +109,17 @@
       
         
         <!-- Menu -->
-        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.9 -1" rotation="-25 0 0">
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
         </a-box>
-        <a-entity id="menu" scale="0 0 0">
+        <!-- Siguiente-->
+        <a-image onclick="javaScript:changeButton('prim2',1)"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="0.62 -0.6 -1" rotation="-25 0 180">
+        </a-image>
+        <!--Anterior-->
+        <a-image onclick="javaScript:changeButton('prim2',-1)"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="-0.62 -0.6 -1" rotation="-25 0 0">
+        </a-image>
+        
+        <!--Menu interno  -->
+        <a-entity id="menu" scale="0 0 0" position="0 0.2 0">
             <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
             
             <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
@@ -140,6 +148,7 @@
       </a-entity>
             
       
+    <script src="../style/script.js"></script>
     </a-scene>
   </body>
 </html>

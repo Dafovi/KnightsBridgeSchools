@@ -9,15 +9,31 @@ body {
 	height: 100%;
     background-image: url(../img/Background-8.png); 
     background-size: 100%;
-	background-repeat: no-repeat;
 	background-position: 0;
 	background-attachment: fixed;
 }
 #start img{
     width: 10%;
-    padding-left: 45%;
+    padding-left: 43.5%;
 }
 #logo{
     width: 20%;
     padding: 12% 40% 2%;
+}
+#info{
+    width: 3%;
+}
+#instructivo{
+    display: none;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -30%;
+}
+#instruc{
+    width: 70%;
+    margin-left: 15%;
+}
+#cerrar{
+    width: 3%;
+    margin-left: 85.5%;
 }

@@ -29,21 +29,29 @@
             <a-sky radius="30" src="#administracion" rotation="0 90 0"></a-sky>
 
             <a-image onclick="javaScript:To('entry.html')" src="#iconoEntrada" position="0 0 4" rotation="0 180 0"></a-image> 
-            <a-image onclick="javaScript:administration(1)" src="#iconoOficinasArriba" position="6 0 -6" rotation="0 -45 0"></a-image> 
+            <!-- <a-image onclick="javaScript:administration(1)" src="#iconoOficinasArriba" position="6 0 -6" rotation="0 -45 0"></a-image> -->
             <a-image onclick="javaScript:To('mainYard.html')" src="#iconoPatio1" position="0 -0.5 -7" rotation="0 0 0"></a-image>
           
         </a-entity>
-        
+        <!-- arriba 
         <a-entity id="scnOficinas" visible="false">
             <a-sky radius="30" src="#oficinasArriba" rotation="0 -90 0"></a-sky>
 
             <a-image onclick="javaScript:administration(0)" src="#iconoAdministracion" position="-2 -1 4" rotation="0 145 0"></a-image> 
-        </a-entity>
+        </a-entity>-->
       
          <!-- Menu -->
-        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.9 -1" rotation="-25 0 0">
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
         </a-box>
-        <a-entity id="menu" scale="0 0 0">
+        <!-- Siguiente-->
+        <a-image onclick="javaScript:To('mainYard.html')"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="0.62 -0.6 -1" rotation="-25 0 180">
+        </a-image>
+        <!--Anterior-->
+        <a-image onclick="javaScript:To('parking.html')"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="-0.62 -0.6 -1" rotation="-25 0 0">
+        </a-image>
+        
+       <!--Menu interno  -->
+        <a-entity id="menu" scale="0 0 0" position="0 0.2 0">
             <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
             
             <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>

@@ -33,7 +33,7 @@
       <!-- 360-degree image scenes.-->
       <!--PATIO1-->
       <a-entity id="scnPatio1" rotation="0 -90 0" >
-        <a-sky radius="30" src="#patio1" rotation ="0 10 0" ></a-sky>
+        <a-sky radius="30" src="#patio1" ></a-sky>
           
         <a-image onclick="javaScript:To('administration.html')" src="#iconoAdministracion" position="-6 0.5 0" rotation="0 90 0"></a-image> 
         <a-image onclick="javaScript:To('preschool.html')" src="#iconoSalonesPrescolar" position="0 0 -6" rotation="0 0 0"></a-image> 
@@ -71,10 +71,18 @@
         </a-cursor>
       </a-entity>
             
-       <!-- Menu -->
-        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.9 -1" rotation="-25 0 0">
+        <!-- Menu -->
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
         </a-box>
-        <a-entity id="menu" scale="0 0 0">
+        <!-- Siguiente-->
+        <a-image onclick="javaScript:changeButton('fuente',1)"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="0.62 -0.6 -1" rotation="-25 0 180">
+        </a-image>
+        <!--Anterior-->
+        <a-image onclick="javaScript:changeButton('fuente',-1)"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="-0.62 -0.6 -1" rotation="-25 0 0">
+        </a-image>
+        
+        <!--Menu interno  -->
+        <a-entity id="menu" scale="0 0 0" position="0 0.2 0">
             <a-image   src="../img/BackgroundMenu-8.png" position="0 0 -1.5" scale="1.2 1.5 0"></a-image>
             
             <a-image  onclick="javaScript:GuardarLocalStorage(1,'coffeYard.html')" src="../img/Icons/BotonZonasRecretivas-8.png" position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
@@ -92,6 +100,7 @@
             <a-image onclick="javaScript:To('entry.html')" src="../img/Icons/BotonEntrada-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
         </a-entity>
         
+    <script src="../style/script.js"></script>
     </a-scene>
   </body>
 </html>

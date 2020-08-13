@@ -4,7 +4,7 @@
       <link rel="icon" href="../img/Icons/LogoKSI-8.png" type="image/png" sizes="16x16">
 	  <meta charset="utf-8">
     <title>Main playground</title>
-    <script src="../style/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="../style/script.js"></script>
   </head>
 
@@ -32,7 +32,7 @@
      
       <!-- 360-degree image scenes.-->
       <!--PATIO1-->
-      <a-entity id="scnPatio1" rotation="0 -90 0" >
+      <a-entity id="scnPatio1" rotation="0 -80 0" >
         <a-sky radius="30" src="#patio1" ></a-sky>
           
         <a-image onclick="javaScript:To('administration.html')" src="#iconoAdministracion" position="-6 0.5 0" rotation="0 90 0"></a-image> 
@@ -72,13 +72,13 @@
         </a-cursor>-->
           
           <!-- Menu -->
-        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="0.4 0.15 0" position="0 -0.7 -1" rotation="-25 0 0">
         </a-box>
         <!-- Siguiente-->
-        <a-image onclick="javaScript:changeButton('fuente',1)"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="0.62 -0.6 -1" rotation="-25 0 180">
+        <a-image onclick="javaScript:changeButton('fuente',1)"  src="../img/Icons/Flecha.png" scale="0.13 0.13 0" position="0.28 -0.7 -1" rotation="-25 0 180">
         </a-image>
         <!--Anterior-->
-        <a-image onclick="javaScript:changeButton('fuente',-1)"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="-0.62 -0.6 -1" rotation="-25 0 0">
+        <a-image onclick="javaScript:changeButton('fuente',-1)"  src="../img/Icons/Flecha.png" scale="0.13 0.13 0" position="-0.28 -0.7 -1" rotation="-25 0 0">
         </a-image>
         
         <!--Menu interno  -->

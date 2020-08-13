@@ -37,3 +37,37 @@ body {
     width: 3%;
     margin-left: 85.5%;
 }
+
+@media only screen and (max-width:720px){
+    #start img{
+        width: 50%;
+        padding-right:15%;
+        float: right;
+    }
+    #logo{
+        width: 80%;
+        padding: 60% 35% 10%;
+    }
+    #info{
+        width: 15.3%;
+        margin-top: -15%;
+        float: right;
+        margin-right: -5%
+    }
+    #instructivo{
+        display: none;
+        width: 100%;
+        margin-left:0;
+    }
+    #instruc{
+        width: 100%;
+        margin-left: 25%;
+    }
+    #cerrar{
+        width: 15.3%;
+        margin-left:100%;
+        margin-right:-53%;
+        float: right
+    }
+    
+}

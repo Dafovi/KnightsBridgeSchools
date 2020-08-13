@@ -4,8 +4,7 @@
       <link rel="icon" href="../img/Icons/LogoKSI-8.png" type="image/png" sizes="16x16">
 	  <meta charset="utf-8">
     <title>Children's Park</title>
-    <script src="../style/aframe.min.js"></script>
-    <script src="../style/script.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
 
 	<body>
@@ -46,13 +45,13 @@
           
           
           <!-- Menu -->
-        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="1 0.3 0" position="0 -0.6 -1" rotation="-25 0 0">
+        <a-box onclick="javaScript:menu(1)"  src="../img/Icons/Menudesplegable-8.png" scale="0.4 0.15 0" position="0 -0.7 -1" rotation="-25 0 0">
         </a-box>
         <!-- Siguiente-->
-        <a-image onclick="javaScript:To('preschool.html')"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="0.62 -0.6 -1" rotation="-25 0 180">
+        <a-image onclick="javaScript:To('preschool.html')"  src="../img/Icons/Flecha.png" scale="0.13 0.13 0" position="0.28 -0.7 -1" rotation="-25 0 180">
         </a-image>
         <!--Anterior-->
-        <a-image onclick="javaScript:GuardarLocalStorage(3,'mainYard.html')"  src="../img/Icons/Flecha.png" scale="0.2 0.2 0" position="-0.62 -0.6 -1" rotation="-25 0 0">
+        <a-image onclick="javaScript:GuardarLocalStorage(3,'mainYard.html')"  src="../img/Icons/Flecha.png" scale="0.13 0.13 0" position="-0.28 -0.7 -1" rotation="-25 0 0">
         </a-image>
         
         <!--Menu interno  -->
@@ -74,8 +73,8 @@
             <a-image onclick="javaScript:To('entry.html')" src="../img/Icons/BotonEntrada-8.png" position="0 -0.5 -1.4" scale="0.5 0.3 0"position="-0.24 0.48 -1.4" scale="0.5 0.3 0"></a-image>
         </a-entity>
       </a-entity>
-            
-      
+        
+    <script src="../style/script.js"></script>          
     </a-scene>
   </body>
 </html>

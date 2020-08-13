@@ -41,7 +41,7 @@
      
       <!-- 360-degree image scenes.-->
       <!--PATIOCAFETERIA-->
-      <a-entity id="scnPatioCafeteria">
+      <a-entity id="scnPatioCafeteria" rotation="0 -50 0">
         <a-sky radius="30" src="#patioCafeteria" rotation="0 -25 0"></a-sky>
           
         <a-image onclick="javaScript:To('primaryTwo.html')" src="#iconoPatio2Primaria" position="2 0 -8" rotation="0 -25 0"></a-image>  
@@ -55,7 +55,7 @@
       </a-entity>
         
         <!--SALONMUSICA-->
-      <a-entity id="scnSalonMusica" visible="false">
+      <a-entity id="scnSalonMusica" rotation="0 -50 0" visible="false">
         <a-sky radius="30" src="#salonMusica"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="-3.5 0 -4" rotation="0 0 0"></a-image>  
@@ -63,7 +63,7 @@
       </a-entity>
         
         <!--CAFETERIA-->
-      <a-entity id="scnCafeteria" visible="false">
+      <a-entity id="scnCafeteria" rotation="0 -50 0" visible="false">
         <a-sky radius="30" src="#cafeteria"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(0)" src="#iconoPatioCafeteria" position="2.2 0 -6" rotation="0 0 0"></a-image>  
@@ -71,7 +71,7 @@
       </a-entity>
         
         <!--VOLEIBOL-->
-      <a-entity id="scnVoleibol"  visible="false">
+      <a-entity id="scnVoleibol" rotation="0 -50 0"  visible="false">
         <a-sky radius="30" src="#voleibol"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(4)" src="#iconoFutbol" position="0 0 6" rotation="0 180 0"></a-image>
@@ -82,7 +82,7 @@
       </a-entity>
         
          <!--FUTBOL-->
-      <a-entity id="scnFutbol" visible="false">
+      <a-entity id="scnFutbol" rotation="0 -50 0" visible="false">
         <a-sky radius="30" src="#futbol" rotation="0 90 0"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(3)" src="#iconoVoleibol" position="1 0.5 5" rotation="0 180 0"></a-image>
@@ -92,7 +92,7 @@
       </a-entity>
         
         <!--BASQUETBOL-->
-      <a-entity id="scnBasquetbol" visible="false">
+      <a-entity id="scnBasquetbol" rotation="0 -50 0" visible="false">
         <a-sky radius="30" src="#basquetbol" rotation="0 -135 0"></a-sky>
           
         <a-image onclick="javaScript:patioCaf(4)" src="#iconoFutbol" position="3 0.5 -5" rotation="0 -25 0"></a-image>

@@ -12,62 +12,65 @@ body {
 	background-position: 0;
 	background-attachment: fixed;
 }
-#start img{
-    width: 10%;
-    padding-left: 43.5%;
-}
-#logo{
-    width: 20%;
-    padding: 12% 40% 2%;
-}
-#info{
-    width: 3%;
-}
-#instructivo{
-    display: none;
-    width: 50%;
-    margin-left: 25%;
-    margin-top: -30%;
-}
-#instruc{
-    width: 70%;
-    margin-left: 15%;
-}
-#cerrar{
-    width: 3%;
-    margin-left: 85.5%;
-}
+@media only screen and (min-width:1080px){
+    #start img{
+        width: 10%;
+        padding-left: 43.5%;
+    }
+    #logo{
+        width: 20%;
+        padding: 12% 40% 2%;
+    }
+    #info{
+        width: 3%;
+    }
+    #instructivo{
+        display: none;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -30%;
+    }
+    #instruc{
+        width: 70%;
+        margin-left: 15%;
+    }
+    #cerrar{
+        width: 3%;
+        margin-left: 85.5%;
+    }
 
-@media only screen and (max-width:720px){
+}
+@media only screen and (max-width:1080px){
     #start img{
         width: 50%;
-        padding-right:15%;
+        padding-right:10%;
         float: right;
     }
     #logo{
         width: 80%;
-        padding: 60% 35% 10%;
+        padding: 60% 35% 15%;
     }
     #info{
         width: 15.3%;
-        margin-top: -15%;
         float: right;
-        margin-right: -5%
+        margin-right: -69%
     }
     #instructivo{
         display: none;
         width: 100%;
-        margin-left:0;
+        position: absolute;
+        top: 0;
+        margin-top: 6%;
+        
     }
     #instruc{
         width: 100%;
         margin-left: 25%;
     }
     #cerrar{
-        width: 15.3%;
+        width: 14%;
         margin-left:100%;
-        margin-right:-53%;
+        margin-right:-42%;
         float: right
     }
-    
 }

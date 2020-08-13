@@ -5,7 +5,7 @@
 	  <meta charset="utf-8">
     <title>High School</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="../style/script.js"></script>
+	 <link rel="stylesheet" href="../style/style.css">
   </head>
 
 	<body>
@@ -31,7 +31,7 @@
       <!-- 360-degree image scenes.-->
         
         <!--PATIO2BACHILLERATO-->
-      <a-entity id="scnPatio2Bachillerato">
+      <a-entity id="scnPatio2Bachillerato" >
         <a-sky radius="30" src="#patio2Bachillerato" rotation="-3 -60 0"></a-sky>
           
         <a-image onclick="javaScript:To('highSchoolOne.html')" src="#iconoPatio1Bachillerato" position="5 0 -4" rotation="0 -65 0"></a-image>  
@@ -47,7 +47,7 @@
       </a-entity>
         
         <!--SALONP2B1-->
-      <a-entity id="scnBusiness" visible="false">
+      <a-entity id="scnBusiness" rotation="0 20 0"  visible="false">
         <a-sky radius="30" src="#business"></a-sky>
         <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="0.5 0 -4" rotation="0 0 0"></a-image>
       </a-entity>
@@ -62,7 +62,7 @@
         <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="2 0 6" rotation="0 180 0"></a-image>
       </a-entity>
         <!--SALONP2B4-->
-      <a-entity id="scnTok" visible="false">
+      <a-entity id="scnTok" visible="false" >
         <a-sky radius="30" src="#tok"></a-sky>
         <a-image onclick="javaScript:BachilleratoDos(0)" src="#iconoPatio2Bachillerato" position="-3.8 0 -4" rotation="0 0 0"></a-image>
       </a-entity>

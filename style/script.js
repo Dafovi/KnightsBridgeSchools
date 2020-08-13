@@ -355,9 +355,9 @@ function changeButton(scene,n){
                 else if(s>=0&&s<2)
                 PatioUno(s)
                 else
-                To('childPark.html') 
-                
-                delay=true;
+                To('childPark.html')
+				if(s===1)
+				delay=true;
             break;
             case "pres":
                 if(s<0)
@@ -366,8 +366,8 @@ function changeButton(scene,n){
                 salonesPre(s)
                 else
                 To('primaryOne.html')
-                
-                delay=true;
+				if(s===1)
+				delay=true;
             break;
             case "prim1":
                 if(s<0)
@@ -376,25 +376,28 @@ function changeButton(scene,n){
                 PrimariaUno(s)
                 else
                 GuardarLocalStorage(4,'coffeYard.html')
-                
-                delay=true;
+				if(s===1)
+				delay=true;
             break;
             case "bachi1":
-                //console.log("s=="+s);    
                 if(s<0)
                 GuardarLocalStorage(4,'coffeYard.html')
                 else if(s===0)
                 BachilleratoUno(5)
-                else if(s===1)
-                BachilleratoUno(0)
+                else if(s===1){
+                	BachilleratoUno(0)
+					delay=true;
+				}
                 else if(s===2)
                 GuardarLocalStorage(6,'primaryTwo.html')
                 else if(s===3)
                 GuardarLocalStorage(7,'highSchoolTwo.html')
                 else if(s===4)
                 BachilleratoUno(1)
-                else if(s===5)
-                BachilleratoUno(2)
+                else if(s===5){
+					BachilleratoUno(2)
+					delay=true;
+				}
                 else if(s===6)
                 BachilleratoUno(3)
                 else if(s===7)
@@ -405,16 +408,16 @@ function changeButton(scene,n){
                 BachilleratoUno(4)
                 else if(s===10)
                 To('parking.html')
-                
-                delay=true;
             break;
             case "prim2":
                 if(s<0)
                 To('highSchoolOne.html')
                 else if(s===0)
                 PrimariaDos(5)
-                else if(s===1)
-                PrimariaDos(1)
+                else if(s===1){
+                	PrimariaDos(1)
+					delay=true;
+				}
                 else if(s===2)
                 GuardarLocalStorage(7,'highSchoolTwo.html')
                 else if(s===3)
@@ -424,15 +427,16 @@ function changeButton(scene,n){
                 else if(s===5)
                 GuardarLocalStorage(10,'coffeYard.html')
                 
-                delay=true;
             break;
             case "bachi2":
                 if(s<0)
                 GuardarLocalStorage(6,'primaryTwo.html')
                 else if(s===0)
                 BachilleratoDos(4);
-                else if(s===1)
-                BachilleratoDos(2);
+                else if(s===1){
+                	BachilleratoDos(2);
+					delay=true;
+				}
                 else if(s===2)
                 BachilleratoDos(1);
                 else if(s===3)
@@ -443,8 +447,7 @@ function changeButton(scene,n){
                 BachilleratoDos(3)
                 else if(s===6)
                 GuardarLocalStorage(12,'highSchoolOne.html') 
-                
-                delay=true;           
+                       
             break;
             case "caf":
                 if(s<0)
@@ -463,7 +466,7 @@ function changeButton(scene,n){
                 patioCaf(3)
                 else if(s===7)
                 GuardarLocalStorage(11,'highSchoolTwo.html')
-                
+                if(s===4)
                 delay=true;
             break;
         }
